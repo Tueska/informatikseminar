@@ -1,6 +1,6 @@
 <template>
     <div class="todo">
-        <h3>To-dos</h3>
+        <h3>Shopping</h3>
         <div class="error" v-if="error">{{ error }}</div>
         <ol class="todo-list" v-for="todo in todos" :key="todo._id">
             <li>
@@ -23,7 +23,7 @@
 import axios from 'axios';
 
 export default {
-    name: "TodoList",
+    name: "ShoppingList",
     data() {
         return {
             todos: [],
@@ -36,13 +36,13 @@ export default {
     },
     methods: {
         getTodos() {
-            axios.get('http://localhost:3000/api/todo', { withCredentials: true })
+            axios.get('http://localhost:3000/api/shopping', { withCredentials: true })
                 .then(response => {
                     this.todos = response.data;
                 })
                 .catch(error => {
                     console.error(error);
-                    this.error = "Error while fetching todos";
+                    this.error = "Error while fetching shopping list";
                 });
         },
         addTodo() {
@@ -50,7 +50,7 @@ export default {
                 this.error = "Please enter a task";
                 return;
             }
-            axios.post('http://localhost:3000/api/todo', {
+            axios.post('http://localhost:3000/api/shopping', {
                 task: this.newTodo,
                 completed: false
             }, { withCredentials: true })
@@ -64,25 +64,27 @@ export default {
                 })
                 .catch(error => {
                     console.error(error);
-                    this.error = "Error while adding todo";
+                    this.error = "Error while adding shopping item";
                 });
         },
         deleteTodo(deleteID) {
-            axios.delete('http://localhost:3000/api/todo/' + deleteID, { withCredentials: true })
+            axios.delete('http://localhost:3000/api/shopping/' + deleteID, { withCredentials: true })
+                .then(() => {
+                    this.todos = this.todos.filter(t => t._id !== deleteID);
+                })
                 .catch(error => {
                     console.error(error);
-                    this.error = "Error while deleting todo";
+                    this.error = "Error while deleting shopping item";
                 });
-            this.todos = this.todos.filter(todo => todo._id !== deleteID);
         },
         updateTodo(updateID, state) {
-            axios.put('http://localhost:3000/api/todo/' + updateID, {
+            axios.put('http://localhost:3000/api/shopping/' + updateID, {
                 task: this.todos.task,
                 completed: state
             }, { withCredentials: true })
                 .catch(error => {
                     console.error(error);
-                    this.error = "Error while updating todo";
+                    this.error = "Error while updating shopping item";
                 });
         },
         deleteAllDone() {
@@ -113,6 +115,7 @@ export default {
 .delete {
     /* Button with red background, white font */
     background-color: #f44336;
+    /* round */
     color: white;
     /* Float the button to the right */
     float: right;

@@ -1,0 +1,53 @@
+{"level":"info","message":"Inserted todo: 63c7087028095e1894d6069f"}
+{"level":"info","message":"Inserted todo: 63c7bc73b59ea6e5e4806aef","timestamp":"2023-01-18T09:31:31.087Z"}
+{"level":"info","message":"Inserted todo: 63c7be65bd4b023d1c5a989b","timestamp":"2023-01-18T09:39:49.573Z"}
+{"level":"info","message":"Inserted todo: 63c7beab6da9a1273d707b4d","timestamp":"2023-01-18T09:40:59.044Z"}
+{"level":"info","message":"Inserted todo: 63c7bef1464d277643071476","timestamp":"2023-01-18T09:42:09.766Z"}
+{"level":"info","message":"ddoge inserted todo: 63c7bef1464d277643071476 - [object Object]","timestamp":"2023-01-18T09:42:09.767Z"}
+{"level":"info","message":"Inserted todo: 63c7bf0cdf4e4f3fd88c5486","timestamp":"2023-01-18T09:42:36.919Z"}
+{"level":"info","message":"Inserted todo: 63c7bf3be362fe28c7222f64","timestamp":"2023-01-18T09:43:23.618Z"}
+{"level":"info","message":"ddoge inserted todo: 63c7bf3be362fe28c7222f64 - asdasdA","timestamp":"2023-01-18T09:43:23.619Z"}
+{"level":"info","message":"ddoge updatet todo: undefined - undefined to true","timestamp":"2023-01-18T09:44:10.008Z"}
+{"level":"info","message":"ddoge updatet todo: undefined - undefined to false","timestamp":"2023-01-18T09:44:14.927Z"}
+{"level":"info","message":"ddoge updatet todo: [object Object] - undefined to true","timestamp":"2023-01-18T09:45:17.450Z"}
+{"level":"info","message":"ddoge updatet todo: null - undefined to false","timestamp":"2023-01-18T09:45:35.533Z"}
+{"level":"info","message":"ddoge updatet todo: [object Object] - undefined to true","timestamp":"2023-01-18T09:46:04.154Z"}
+{"level":"info","message":"ddoge updatet todo: 63a3274a9bbb39a40252c247 to false","timestamp":"2023-01-18T09:46:43.501Z"}
+{"level":"info","message":"ddoge inserted shopping entry: 63c7c02dfd13ecb8ba2722f5 - Maultaschen","timestamp":"2023-01-18T09:47:25.222Z"}
+{"level":"info","message":"ddoge deleted todo: 63c7bf3be362fe28c7222f64","timestamp":"2023-01-18T09:50:03.401Z"}
+{"level":"info","message":"ddoge inserted schedule entry: 63c7c115f990add39a4cfef2 - undefined","timestamp":"2023-01-18T09:51:17.991Z"}
+{"level":"info","message":"ddoge inserted schedule entry: 63c7c139c96531e1fcbd068c - undefined","timestamp":"2023-01-18T09:51:53.449Z"}
+{"level":"info","message":"ddoge inserted schedule entry: 63c7c15d974a7f493bf49306 - Maultaschen kochen, starting on 2023-01-19T09:00:00.000Z and ending on 2023-01-19T09:30:00.000Z","timestamp":"2023-01-18T09:52:29.737Z"}
+{"level":"info","message":"ddoge deleted schedule entry: 63c7c15d974a7f493bf49306","timestamp":"2023-01-18T09:53:16.988Z"}
+{"level":"info","message":"ddoge updatet schedule entry: 63c7c115f990add39a4cfef2 to Schulung, starting on 2023-01-19T10:00:00.000Z and ending on 2023-01-19T10:30:00.000Z","timestamp":"2023-01-18T09:53:51.893Z"}
+{"level":"info","message":"ddoge updatet schedule entry: 63c7c115f990add39a4cfef2 to Schulung, starting on 2023-01-19T10:00:00.000Z and ending on 2023-01-19T12:30:00.000Z","timestamp":"2023-01-18T09:53:59.029Z"}
+{"level":"info","message":"ddoge updatet schedule entry: 63c7c115f990add39a4cfef2 to Schulung, starting on 2023-01-17T09:00:00.000Z and ending on 2023-01-17T11:30:00.000Z","timestamp":"2023-01-18T10:07:59.947Z"}
+{"level":"info","message":"ddoge created new user: Gunther","timestamp":"2023-01-18T10:16:12.298Z"}
+{"level":"info","message":"ddoge deleted user: 63c7c6ec1f82b58b638aced8","timestamp":"2023-01-18T10:16:33.221Z"}
+{"level":"info","message":"ddoge created new user: gunther","timestamp":"2023-01-18T10:22:08.049Z"}
+{"level":"info","message":"ddoge deleted user: 63c7c8506c466b4ef5fec07e","timestamp":"2023-01-18T10:22:11.369Z"}
+{"level":"info","message":"ddoge set admin rights for 63a4cccedca4e278007523b9 to true","timestamp":"2023-01-18T10:22:41.446Z"}
+{"level":"info","message":"ddoge set admin rights for 63a4cccedca4e278007523b9 to true","timestamp":"2023-01-18T10:22:53.314Z"}
+{"level":"info","message":"ddoge set admin rights for 63a4cccedca4e278007523b9 to true","timestamp":"2023-01-18T10:23:00.191Z"}
+{"level":"info","message":"ddoge set admin rights for 63a4cccedca4e278007523b9 to true","timestamp":"2023-01-18T10:23:12.086Z"}
+{"level":"info","message":"ddoge set admin rights for 63a4cccedca4e278007523b9 to true","timestamp":"2023-01-18T10:23:48.162Z"}
+{"level":"info","message":"ddoge set admin rights for 63a4cccedca4e278007523b9 to true","timestamp":"2023-01-18T10:24:49.824Z"}
+{"level":"info","message":"ddoge set admin rights for 63a4cccedca4e278007523b9 to true","timestamp":"2023-01-18T10:27:30.674Z"}
+{"level":"info","message":"ddoge set admin rights for undefined to true","timestamp":"2023-01-18T10:27:57.999Z"}
+{"level":"info","message":"ddoge set admin rights for undefined to false","timestamp":"2023-01-18T10:28:08.419Z"}
+{"level":"info","message":"ddoge set admin rights for undefined to true","timestamp":"2023-01-18T10:28:09.031Z"}
+{"level":"info","message":"ddoge set admin rights for undefined to false","timestamp":"2023-01-18T10:28:09.358Z"}
+{"level":"info","message":"ddoge set admin rights for undefined to true","timestamp":"2023-01-18T10:28:09.687Z"}
+{"level":"info","message":"ddoge set admin rights for tueska to false","timestamp":"2023-01-18T10:28:52.665Z"}
+{"level":"info","message":"ddoge set admin rights for tueska to true","timestamp":"2023-01-18T10:29:00.159Z"}
+{"level":"info","message":"ddoge set admin rights for tueska to false","timestamp":"2023-01-18T10:29:00.386Z"}
+{"level":"info","message":"ddoge set admin rights for tueska to true","timestamp":"2023-01-18T10:29:00.548Z"}
+{"level":"info","message":"ddoge set admin rights for tueska to false","timestamp":"2023-01-18T10:29:00.688Z"}
+{"level":"info","message":"ddoge set admin rights for tueska to true","timestamp":"2023-01-18T10:29:00.824Z"}
+{"level":"info","message":"ddoge set admin rights for tueska to false","timestamp":"2023-01-18T10:29:00.960Z"}
+{"level":"info","message":"ddoge updatet schedule entry: 63c7c115f990add39a4cfef2 to Schulung, starting on 2023-01-16T08:00:00.000Z and ending on 2023-01-16T10:30:00.000Z","timestamp":"2023-01-18T12:22:16.737Z"}
+{"level":"info","message":"ddoge deleted todo: 63c7bf0cdf4e4f3fd88c5486","timestamp":"2023-01-19T14:31:54.491Z"}
+{"level":"info","message":"ddoge deleted todo: 63c7bef1464d277643071476","timestamp":"2023-01-19T14:32:16.853Z"}
+{"level":"info","message":"ddoge deleted todo: 63c7beab6da9a1273d707b4d","timestamp":"2023-01-19T14:32:17.454Z"}
+{"level":"info","message":"ddoge deleted todo: 63c7be65bd4b023d1c5a989b","timestamp":"2023-01-19T14:32:18.531Z"}
+{"level":"info","message":"ddoge deleted todo: 63c7bc73b59ea6e5e4806aef","timestamp":"2023-01-19T14:32:19.167Z"}

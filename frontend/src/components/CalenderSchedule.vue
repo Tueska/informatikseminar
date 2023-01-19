@@ -3,6 +3,7 @@
     <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'
       :firstDayOfWeek='1'>
       <e-views>
+        <e-view option='Day'></e-view>
         <e-view option='Week'></e-view>
         <e-view option='Month' showWeekend=false></e-view>
       </e-views>
@@ -20,11 +21,14 @@ import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
 
 var remoteData = new DataManager({
   url: "http://localhost:3000/api/schedule",
-  adaptor: new UrlAdaptor(),
+  adaptor: new class extends UrlAdaptor {
+    beforeSend(args, xhr) {
+      xhr.withCredentials = true;
+      super.beforeSend(args, xhr);
+    }
+  },
   crossDomain: true,
-  headers: [{
-    'CalCookie': document.cookie,
-  }]
+  withCredentials: true
 });
 
 export default {
@@ -47,7 +51,7 @@ export default {
         { OwnerText: 'Badezimmer', Id: 2, OwnerColor: '#22c7c7' },
         { OwnerText: 'Wohnzimmer', Id: 3, OwnerColor: '#349e3f' },
         { OwnerText: 'Waschküche', Id: 4, OwnerColor: '#1c77d9' },
-        { OwnerText: 'Putzplan', Id: 5, OwnerColor: '#fb00ff' },
+        { OwnerText: 'Putzplan', Id: 5, OwnerColor: '#0200ff' },
         { OwnerText: 'Other', Id: 6, OwnerColor: '#123123' },
       ],
       eventSettings: {

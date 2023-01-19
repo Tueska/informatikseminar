@@ -7,6 +7,22 @@ const routes = [
     name: 'home',
     component: HomeView,
     meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/settings',
+    name: 'settings',
+    component: () => import(/* webpackChunkName: "about" */ '../views/SettingsView.vue'),
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/management',
+    name: 'management',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ManagementView.vue'),
+    meta: {
       requiresAuth: true,
       is_admin: true
     }
@@ -31,7 +47,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
-    if (localStorage.getItem('jwt') == null) {
+    if (localStorage.getItem('auth') == null) {
       next({
         path: '/login',
         query: {
@@ -43,7 +59,12 @@ router.beforeEach((to, from, next) => {
       let timestamp = localStorage.getItem('timestamp');
       if (to.matched.some(record => record.meta.is_admin)) {
         if (isAuth && new Date(timestamp > Date.now() - 3600000)) {
-          next();
+          // Check if user is admin
+          if (localStorage.getItem('is_admin') == 'true') {
+            next();
+          } else {
+            next({ name: 'Home' });
+          }
         } else {
           localStorage.clear();
           next({ name: 'Home' });
@@ -54,7 +75,7 @@ router.beforeEach((to, from, next) => {
     }
 
   } else if (to.matched.some(record => record.meta.guest)) {
-    if (localStorage.getItem('jwt') == null) {
+    if (localStorage.getItem('auth') == null) {
       next();
     } else {
       next({ name: 'Home' });

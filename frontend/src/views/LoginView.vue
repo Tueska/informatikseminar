@@ -36,16 +36,19 @@ export default {
         headers: {
           'Authorization': 'Basic ' + Buffer.from(this.username + ':' + this.password).toString('base64'),
           'Content-Type': 'application/json'
-        }
+
+        },
+        withCredentials: true
       };
       axios(config)
         .then(response => {
-          // Save JWT to local storage and redirect to management page
-          localStorage.setItem('jwt', response.data);
+          localStorage.setItem('is_admin', response.data.is_admin);
           localStorage.setItem('auth', true);
           localStorage.setItem('timestamp', new Date());
+
           this.$store.state.auth = true;
-          document.cookie = `jwt=${response.data}; ${new Date() + 604800000}; path=/`;
+          this.$store.state.isAdmin = response.data.is_admin;
+
           this.$router.push('/');
         })
         .catch(error => {

@@ -110,8 +110,9 @@ app.use((req, res, next) => {
     console.log(`${req.method} ${req.path}`);
     next();
 });
-// Allow CORS TODO: glöm inte att ta bort detta i produktion och ställ in korrekt CORS
-app.use(cors({ origin: 'http://localhost:8080', credentials: true }));
+
+app.use(express.static('public'));
+app.use(cors({ origin: 'http://wg.rwuwu.de', credentials: true }));
 
 
 // ----------------- SETUP -----------------

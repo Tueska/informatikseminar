@@ -2,7 +2,7 @@
   <nav>
     <router-link to="/" v-if="$store.state.auth">Home</router-link> |
     <router-link to="/settings" v-if="$store.state.auth">Settings</router-link> |
-    <router-link to="/management" v-if="$store.state.isAdmin">Management</router-link> |
+    <router-link to="/management" v-if="$store.state.isAdmin">Management |</router-link>
     <a @click="logout" v-if="$store.state.auth">Logout</a>
   </nav>
   <router-view />

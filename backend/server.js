@@ -138,6 +138,7 @@ app.post('/api/setup', async (req, res) => {
         const user = {
             user: 'ddoge',
             password: hash,
+            is_admin: true
         };
         await collection.insertOne(user);
 

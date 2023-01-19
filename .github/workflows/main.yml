@@ -13,7 +13,7 @@ jobs:
         id: docker_build
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: rewatch-stack
+          image: informatikseminar
           dockerfile: Dockerfile
           registry: ghcr.io
           username: ${{ secrets.GHCR_USERNAME }}

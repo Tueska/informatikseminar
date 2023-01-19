@@ -68,7 +68,7 @@ export default {
   },
   methods: {
     deleteUser(userID) {
-      axios.delete('http://localhost:3000/api/user/' + userID, { withCredentials: true })
+      axios.delete('/api/user/' + userID, { withCredentials: true })
         .then(() => {
           this.users = this.users.filter(user => user._id !== userID);
         })
@@ -77,7 +77,7 @@ export default {
         });
     },
     addUser() {
-      axios.post('http://localhost:3000/api/user', {
+      axios.post('/api/user', {
         user: this.newUser,
         password: this.newPass,
         is_admin: this.newAdmin
@@ -86,7 +86,7 @@ export default {
           this.newUser = '';
           this.newPass = '';
           this.newAdmin = false;
-          axios.get('http://localhost:3000/api/user', { withCredentials: true })
+          axios.get('/api/user', { withCredentials: true })
             .then(response => {
               this.users = response.data;
             })
@@ -100,7 +100,7 @@ export default {
         });
     },
     updateUser(userID, isAdmin) {
-      axios.post(`http://localhost:3000/api/setAdmin/${userID}/${isAdmin}`, {}, { withCredentials: true })
+      axios.post(`/api/setAdmin/${userID}/${isAdmin}`, {}, { withCredentials: true })
         .then(() => {
 
         })
@@ -110,7 +110,7 @@ export default {
     },
   },
   getUsers() {
-    axios.get('http://localhost:3000/api/user', { withCredentials: true })
+    axios.get('/api/user', { withCredentials: true })
       .then(response => {
         this.users = response.data;
       })
@@ -124,7 +124,7 @@ export default {
       this.$router.push('/login');
       return;
     }
-    axios.get('http://localhost:3000/api/user', { withCredentials: true })
+    axios.get('/api/user', { withCredentials: true })
       .then(response => {
         this.users = response.data;
       })

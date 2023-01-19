@@ -32,7 +32,7 @@ export default {
     login() {
       var config = {
         method: 'post',
-        url: 'http://localhost:3000/api/login',
+        url: '/api/login',
         headers: {
           'Authorization': 'Basic ' + Buffer.from(this.username + ':' + this.password).toString('base64'),
           'Content-Type': 'application/json'

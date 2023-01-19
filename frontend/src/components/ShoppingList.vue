@@ -36,7 +36,7 @@ export default {
     },
     methods: {
         getTodos() {
-            axios.get('http://localhost:3000/api/shopping', { withCredentials: true })
+            axios.get('/api/shopping', { withCredentials: true })
                 .then(response => {
                     this.todos = response.data;
                 })
@@ -50,7 +50,7 @@ export default {
                 this.error = "Please enter a task";
                 return;
             }
-            axios.post('http://localhost:3000/api/shopping', {
+            axios.post('/api/shopping', {
                 task: this.newTodo,
                 completed: false
             }, { withCredentials: true })
@@ -68,7 +68,7 @@ export default {
                 });
         },
         deleteTodo(deleteID) {
-            axios.delete('http://localhost:3000/api/shopping/' + deleteID, { withCredentials: true })
+            axios.delete('/api/shopping/' + deleteID, { withCredentials: true })
                 .then(() => {
                     this.todos = this.todos.filter(t => t._id !== deleteID);
                 })
@@ -78,7 +78,7 @@ export default {
                 });
         },
         updateTodo(updateID, state) {
-            axios.put('http://localhost:3000/api/shopping/' + updateID, {
+            axios.put('/api/shopping/' + updateID, {
                 task: this.todos.task,
                 completed: state
             }, { withCredentials: true })

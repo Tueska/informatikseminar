@@ -20,7 +20,7 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Res
 import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
 
 var remoteData = new DataManager({
-  url: "http://localhost:3000/api/schedule",
+  url: "/api/schedule",
   adaptor: new class extends UrlAdaptor {
     beforeSend(args, xhr) {
       xhr.withCredentials = true;

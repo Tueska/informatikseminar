@@ -39,7 +39,7 @@ export default {
 
       var config = {
         method: 'post',
-        url: 'http://localhost:3000/api/changePassword',
+        url: '/api/changePassword',
         data: {
           password: this.password
         },
@@ -55,7 +55,7 @@ export default {
         });
     },
     getLogs() {
-      axios.get('http://localhost:3000/api/logs', { withCredentials: true })
+      axios.get('/api/logs', { withCredentials: true })
         .then(response => {
           let logs = response.data;
           // download to file

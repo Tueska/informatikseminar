@@ -14,7 +14,7 @@ export default {
   methods: {
     async logout() {
 
-      await fetch('http://localhost:3000/api/logout', {
+      await fetch('/api/logout', {
         method: 'POST',
         credentials: 'include'
       })

@@ -30,7 +30,8 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // ----------------- MONGODB -----------------
-const ConnectionURL = 'mongodb://admin:admin@localhost:27017/';
+// const ConnectionURL = process.env.MONGO_CONNECTION || 'mongodb://admin:admin@localhost:27017/';
+const ConnectionURL = process.env.MONGO_CONNECTION;
 const client = new MongoClient(ConnectionURL);
 await client.connect()
 

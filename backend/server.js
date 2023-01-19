@@ -113,7 +113,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.static('public'));
-app.use(cors({ origin: 'http://wg.rwuwu.de', credentials: true }));
+// app.use(cors({ origin: 'http://wg.rwuwu.de', credentials: true }));
 
 
 // ----------------- SETUP -----------------
